@@ -1,0 +1,105 @@
+.admin-page { padding-top: calc(var(--navbar-height) + var(--space-lg)); }
+.admin-title { margin-bottom: var(--space-lg); }
+
+.admin-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-md);
+  margin-bottom: var(--space-xl);
+}
+
+.admin-stat-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.admin-stat-num {
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.admin-stat-label {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.admin-recents {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xl);
+}
+
+.admin-recent-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+}
+
+.admin-recent-card h3 {
+  font-size: 1rem;
+  margin-bottom: var(--space-md);
+}
+
+.admin-toolbar {
+  display: flex;
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+  flex-wrap: wrap;
+}
+
+.admin-search {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 4px 4px 4px 12px;
+  min-width: 250px;
+}
+
+.admin-search svg {
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+
+.admin-search .form-input {
+  border: none;
+  background: transparent;
+  padding: 8px;
+}
+
+.admin-search .form-input:focus {
+  box-shadow: none;
+}
+
+.table-wrap {
+  overflow-x: auto;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.text-accent {
+  color: var(--accent) !important;
+}
+
+@media (max-width: 1024px) {
+  .admin-stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .admin-recents { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 640px) {
+  .admin-stats-grid { grid-template-columns: 1fr 1fr; }
+  .admin-toolbar { flex-direction: column; }
+}

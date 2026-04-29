@@ -1,0 +1,137 @@
+.properties-page {
+  padding-top: calc(var(--navbar-height) + var(--space-lg));
+}
+
+.props-header {
+  margin-bottom: var(--space-xl);
+}
+
+.props-search-bar {
+  display: flex;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-md);
+}
+
+.props-search-form {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 4px 4px 4px 16px;
+  gap: var(--space-sm);
+}
+
+.props-search-icon {
+  color: var(--text-muted);
+  flex-shrink: 0;
+  font-size: 1.2rem;
+}
+
+.props-search-input {
+  flex: 1;
+  background: transparent !important;
+  border: none !important;
+  padding: 12px 8px !important;
+}
+
+.props-search-input:focus {
+  box-shadow: none !important;
+}
+
+.props-filter-toggle {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.props-filter-toggle.has-filters {
+  border-color: var(--primary);
+  color: var(--primary-light);
+}
+
+.filter-dot {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 8px;
+  height: 8px;
+  background: var(--primary);
+  border-radius: 50%;
+}
+
+.props-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.props-count {
+  font-size: 0.9rem;
+  color: var(--text-tertiary);
+}
+
+.props-sort {
+  width: auto;
+  min-width: 180px;
+  padding: 8px 36px 8px 12px;
+  font-size: 0.85rem;
+}
+
+/* Filters Panel */
+.filters-panel {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  margin-bottom: var(--space-xl);
+}
+
+.filters-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-lg);
+}
+
+.filters-header h3 {
+  font-size: 1.1rem;
+}
+
+.filters-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-md);
+}
+
+.filters-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--space-sm);
+  margin-top: var(--space-lg);
+  padding-top: var(--space-lg);
+  border-top: 1px solid var(--border);
+}
+
+@media (max-width: 768px) {
+  .props-search-bar {
+    flex-direction: column;
+  }
+  .filters-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .props-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-sm);
+  }
+  .props-sort {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .filters-grid {
+    grid-template-columns: 1fr;
+  }
+}
